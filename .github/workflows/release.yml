@@ -40,11 +40,10 @@ jobs:
       gitHubPackagesNuGetFeedUri: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
       publishToGitHubContainerRegistry: true
       publishToPowerShellGallery: true
-      psGalleryRepositoryName: PSGallery
       publishToGitHubRelease: true
 
     secrets:
-      githubToken: ${{ secrets.GITHUB_TOKEN }}
+      gitHubPackagesNuGetFeedToken: ${{ secrets.GITHUB_TOKEN }}
       gitHubContainerRegistryToken: ${{ secrets.GITHUB_TOKEN }}
       galleryApiKey: ${{ secrets.GALLERY_API_KEY }}
       gitHubReleaseToken: ${{ secrets.GITHUB_TOKEN }}
