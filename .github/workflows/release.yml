@@ -22,7 +22,8 @@ jobs:
         id: version
         shell: pwsh
         run: |
-          $version = "${{ github.ref_name }}".TrimStart("v")
+          $refName = "${{ github.ref_name }}"
+          $version = if ($refName.StartsWith("v")) { $refName.Substring(1) } else { $refName }
           "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
 
   publish:
