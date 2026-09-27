@@ -3,7 +3,7 @@ name: build-and-publish-module
 on:
   push:
     tags:
-      - "v**"
+      - "v*"
 
 permissions:
   contents: write
@@ -35,7 +35,7 @@ jobs:
       modulePath: ./src/AzooEmptyModuleForTesting
       publishToGitHubPackagesNuGetFeed: true
       gitHubPackagesNuGetFeedOrganizationName: AzooSystems
-      gitHubPackagesNuGetFeedRepositoryName: GitHub
+      gitHubPackagesNuGetFeedRepositoryName: ${{ github.event.repository.name }}
       gitHubPackagesNuGetFeedUri: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
       publishToPowerShellGallery: true
       psGalleryRepositoryName: PSGallery
