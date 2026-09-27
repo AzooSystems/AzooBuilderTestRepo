@@ -28,7 +28,7 @@ jobs:
 
   publish:
     needs: version
-    uses: AzooSystems/AzooBuilder/.github/workflows/build-and-release-ps-module.yml@a99c72a7f95bbd5c5064fbd6d818b399cf7ab4f1
+    uses: AzooSystems/AzooBuilder/.github/workflows/build-and-release-ps-module.yml@5f872139e68612793e04f7b561ef6c37a23209ff
     with:
       version: ${{ needs.version.outputs.version }}
       moduleName: AzooEmptyModuleForTesting
