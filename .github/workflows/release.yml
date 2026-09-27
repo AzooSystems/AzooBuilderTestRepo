@@ -29,7 +29,7 @@ jobs:
   publish:
     needs: version
     # Immutable releases
-    uses: AzooSystems/AzooBuilder/.github/workflows/build-and-release-ps-module.yml@26.08.27
+    uses: AzooSystems/AzooBuilder/.github/workflows/build-and-release-ps-module.yml@26.09.27
     with:
       version: ${{ needs.version.outputs.version }}
       moduleName: AzooEmptyModuleForTesting
