@@ -3,5 +3,13 @@
   "extends": [
     "config:recommended",
     "helpers:pinGitHubActionDigests"
+  ],
+  // config AzooSystems/AzooBuilder/.github/workflows/build-and-release-ps-module.yml not to have any freeze period
+  "packageRules": [
+    {
+      "matchPaths": ["AzooSystems/AzooBuilder/.github/workflows/build-and-release-ps-module.yml"],
+      "matchUpdateTypes": ["pinDigest"],
+      "minimumReleaseAge": null
+    }
   ]
 }
